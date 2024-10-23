@@ -8,7 +8,6 @@ const Root = () => {
         <div className="max-w-[1920px] w-82% mx-auto">
             <Header></Header>
             <div className="max-w-[1920px] w-82% mx-auto md:px-10 px-2">
-
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
