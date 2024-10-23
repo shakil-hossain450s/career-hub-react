@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import SectionHeading from '../SectionHeading/SectionHeading';
 import Job from '../Job/Job';
+import Button from '../Button/Button';
 
 const FeaturedJobs = () => {
     const [jobs, setJobs] = useState([]);
@@ -17,6 +18,9 @@ const FeaturedJobs = () => {
                 {
                     jobs.map(job => <Job key={job.id} job={job}></Job>)
                 }
+            </div>
+            <div className='grid place-items-center mt-10'>
+                <Button btnName={"See All Jobs"}></Button>
             </div>
         </div>
     );

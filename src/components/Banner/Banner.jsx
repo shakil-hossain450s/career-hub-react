@@ -1,4 +1,5 @@
 import BannerImage from "../../assets/images/user.png"
+import Button from "../Button/Button";
 
 const Banner = () => {
     return (
@@ -15,7 +16,7 @@ const Banner = () => {
                     <p className="py-6">
                         Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.
                     </p>
-                    <button className="btn bg-[#7E90FE] text-white hover:bg-[#7E90FE] font-bold px-7">Get Started</button>
+                    <Button btnName={"Get Started"}></Button>
                 </div>
             </div>
         </div>

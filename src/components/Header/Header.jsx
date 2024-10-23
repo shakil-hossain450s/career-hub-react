@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import Button from "../Button/Button";
 
 const Header = () => {
 
@@ -42,7 +43,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-[#7E90FE] text-white hover:bg-[#7E90FE] font-bold px-7">Start Applying</a>
+                <Button btnName={"Start Applying"}></Button>
             </div>
         </div>
     );

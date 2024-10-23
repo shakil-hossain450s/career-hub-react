@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { AiOutlineDollarCircle } from 'react-icons/ai';
 import { GrLocation } from 'react-icons/gr';
+import Button from '../Button/Button';
 
 const Job = ({ job }) => {
     const { logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = job;
@@ -26,7 +27,7 @@ const Job = ({ job }) => {
                         <span className='text-xl font-semibold'>{salary}</span>
                     </p>
                 </div>
-                <button className="btn bg-[#7E90FE] text-white hover:bg-[#7E90FE] font-bold px-7">View Details</button>
+                <Button btnName={"View Details"}></Button>
             </div>
         </div>
     );
