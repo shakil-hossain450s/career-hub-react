@@ -2,9 +2,10 @@ import PropTypes from 'prop-types';
 import { AiOutlineDollarCircle } from 'react-icons/ai';
 import { GrLocation } from 'react-icons/gr';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const Job = ({ job }) => {
-    const { logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = job;
+    const { id, logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = job;
     return (
         <div className='border border-[#E8E8E8] rounded-lg p-6'>
             <figure className='mb-6'>
@@ -27,7 +28,9 @@ const Job = ({ job }) => {
                         <span className='text-xl font-semibold'>{salary}</span>
                     </p>
                 </div>
-                <Button btnName={"View Details"}></Button>
+                <Link to={`/job/${id}`}>
+                    <Button btnName={"View Details"}></Button>
+                </Link>
             </div>
         </div>
     );
