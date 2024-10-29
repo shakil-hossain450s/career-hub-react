@@ -8,7 +8,7 @@ const AppliedJobsCard = ({ job }) => {
 
     return (
         <div className="card card-side border border-[#E8E8E8] mb-6 p-6">
-            <figure className="bg-[#F4F4F4] flex justify-center items-center p-10 rounded">
+            <figure className="bg-[#F4F4F4] w-[240px] flex justify-center items-center p-10 rounded">
                 <img
                     src={logo}
                     alt="Movie" />
