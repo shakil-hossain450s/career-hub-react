@@ -14,7 +14,7 @@ const JobDetails = () => {
 
     return (
         <div>
-            <h2 className="text-center text-3xl font-bold mt-10 mb-24">Job Details: {id}</h2>
+            <h2 className="text-center text-3xl font-bold mt-10 mb-24">Job Details</h2>
             <div className="grid md:grid-cols-6 gap-6">
                 <div className="md:col-span-4 space-y-6">
                     <h3 className="text-[#757575] font-medium"><span className="text-[#1A1919] font-extrabold">Job Description: </span> {job_description}</h3>
