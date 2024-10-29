@@ -2,7 +2,7 @@ import { AiOutlineDollarCircle } from "react-icons/ai";
 import { CiPhone } from "react-icons/ci";
 import { IoCalendarOutline } from "react-icons/io5";
 import { MdOutlineLocationOn, MdOutlineMailOutline } from "react-icons/md";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Button from "../Button/Button";
 import 'react-toastify/dist/ReactToastify.css';
 import { saveJobApplication } from "../utility/localStorage";
@@ -15,7 +15,7 @@ const JobDetails = () => {
     const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, contact_information: { phone, email, address } } = job;
 
     const handleApplyJob = () => {
-        saveJobApplication(id);
+        saveJobApplication(parseInt(id));
     }
 
     return (
@@ -64,9 +64,9 @@ const JobDetails = () => {
                             </p>
                         </div>
                     </div>
-                    <div onClick={handleApplyJob} className="mt-6">
+                    <Link onClick={handleApplyJob} className="mt-6">
                         <Button btnName={"Apply Now"} widthFull="w-full"></Button>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>

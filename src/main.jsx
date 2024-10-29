@@ -9,6 +9,7 @@ import Statistic from './components/Statistic/Statistic.jsx'
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
 import JobDetails from './components/JobDetails/JobDetails.jsx'
 import { ToastContainer } from 'react-toastify'
+import FeaturedJobs from './components/FeaturedJobs/FeaturedJobs.jsx'
 
 
 const router = createBrowserRouter([
@@ -22,8 +23,13 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
+        path: "/jobs",
+        element: <FeaturedJobs></FeaturedJobs>
+      }, 
+      {
         path: "/applied",
-        element: <AppliedJobs></AppliedJobs>
+        element: <AppliedJobs></AppliedJobs>,
+        loader: () => fetch('/jobs.json')
       },
       {
         path: "/statistic",
@@ -32,7 +38,7 @@ const router = createBrowserRouter([
       {
         path: "/job/:id",
         element: <JobDetails></JobDetails>,
-        loader: () => fetch('../jobs.json')
+        loader: () => fetch('/jobs.json')
       }
     ]
   }
