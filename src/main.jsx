@@ -8,6 +8,8 @@ import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx'
 import Statistic from './components/Statistic/Statistic.jsx'
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx'
 import JobDetails from './components/JobDetails/JobDetails.jsx'
+import { ToastContainer } from 'react-toastify'
+
 
 const router = createBrowserRouter([
   {
@@ -39,5 +41,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
+    <ToastContainer />
   </StrictMode>,
 )

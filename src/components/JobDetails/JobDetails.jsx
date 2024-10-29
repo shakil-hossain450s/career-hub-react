@@ -4,6 +4,8 @@ import { IoCalendarOutline } from "react-icons/io5";
 import { MdOutlineLocationOn, MdOutlineMailOutline } from "react-icons/md";
 import { useLoaderData, useParams } from "react-router-dom";
 import Button from "../Button/Button";
+import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from "../utility/localStorage";
 
 const JobDetails = () => {
     const jobs = useLoaderData();
@@ -11,6 +13,10 @@ const JobDetails = () => {
 
     const job = jobs.find(j => j.id === parseInt(id));
     const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, contact_information: { phone, email, address } } = job;
+
+    const handleApplyJob = () => {
+        saveJobApplication(id);
+    }
 
     return (
         <div>
@@ -58,7 +64,7 @@ const JobDetails = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="mt-6">
+                    <div onClick={handleApplyJob} className="mt-6">
                         <Button btnName={"Apply Now"} widthFull="w-full"></Button>
                     </div>
                 </div>
